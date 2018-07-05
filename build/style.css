@@ -1,0 +1,10 @@
+body ,html {
+    font-family: '微软雅黑'；
+} 
+
+#app {
+    width: 600px;
+    margin: 100px auto;
+    position: relative;
+    background-color: red;
+}
