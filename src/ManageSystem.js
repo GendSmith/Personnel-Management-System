@@ -1,9 +1,9 @@
 import React from "react";
 import StaffItemPanel from './StaffItemPanel.js';
 import STAFF from './STAFF.js';
-import StaffHeader from "./src/StaffHeader.js";
-import StaffFooter from "./src/StaffFooter.js";
-import StaffDetail from './StaffDetail.js';
+//import StaffHeader from "./StaffHeader.js";
+import StaffFooter from "./StaffFooter.js";
+//import StaffDetail from './StaffDetail.js'
 
 class App extends React.Component {
 
@@ -15,55 +15,55 @@ class App extends React.Component {
 		};
 	}
 
-    addStaffItem(item) {
-        this.setState({
-            staff:this.state.staff.addStaffItem(item)
-        });
-    }
+    // addStaffItem(item) {
+    //     this.setState({
+    //         staff:this.state.staff.addStaffItem(item)
+    //     });
+    // }
 
-    removeStaffItem(key) {
-        this.setState({
-            staff:this.state.staff.removeStaffItem(key)
-        });
-    }
+    // removeStaffItem(key) {
+    //     this.setState({
+    //         staff:this.state.staff.removeStaffItem(key)
+    //     });
+    // }
 
-    detailStaffItem(key){
-        this.setState({
-            staffDetail:this.state.staff.staff.filter(item => {
-                return item.key==key
-            })
-        });
-    }
+    // detailStaffItem(key){
+    //     this.setState({
+    //         staffDetail:this.state.staff.staff.filter(item => {
+    //             return item.key==key
+    //         })
+    //     });
+    // }
 
-    closeDetail(){
-        this.setState({
-            staffDetail:null
-        });
-    }
+    // closeDetail(){
+    //     this.setState({
+    //         staffDetail:null
+    //     });
+    // }
 
-    editDetail(item) {
-        this.setState({
-            staff:this.state.staff.editStaffItem(item)
-        });
-    }
+    // editDetail(item) {
+    //     this.setState({
+    //         staff:this.state.staff.editStaffItem(item)
+    //     });
+    // }
 
-    sortStaff(sortType) {
-        this.setState({
-            staff:this.state.sortStaff(sortType)
-        });
-    }
+    // sortStaff(sortType) {
+    //     this.setState({
+    //         staff:this.state.sortStaff(sortType)
+    //     });
+    // }
 
-    filtStaff(filtType) {
-        this.setState({
-            staff:this.state.staff.filtStaff(filtType)
-        });
-    }
+    // filtStaff(filtType) {
+    //     this.setState({
+    //         staff:this.state.staff.filtStaff(filtType)
+    //     });
+    // }
 
-    searchStaff(word) {
-        this.setState({
-            staff:this.state.staff.searchStaff(word)
-        })
-    }
+    // searchStaff(word) {
+    //     this.setState({
+    //         staff:this.state.staff.searchStaff(word)
+    //     })
+    // }
 
     render () {
         return (
@@ -71,22 +71,28 @@ class App extends React.Component {
                 <h1>
                     hello world!
                 </h1>
-                <StaffHeader
+                {/* <StaffHeader
                     sortStaff = {this.sortStaff.bind(this)}
                     filtStaff = {this.filtStaff.bind(this)}
                     searchStaff = {this.searchStaff.bind(this)}
-                />
+                /> */}
                 <StaffItemPanel
+                    items = {this.state.staff.allStaff}
+                />
+
+>
+                {/* <StaffItemPanel
                     items = {this.state.staff.allStaff}
                     removeStaffItem = {this.removeStaffItem.bind(this)}
                     detailStaffItem = {this.detailStaffItem.bind(this)}
-                />                
-                <StaffFooter addStaffItem = {this.addStaffItem.bind(this)}/>
-                <staffDetail 
+                />                 */}
+                {/* <StaffFooter addStaffItem = {this.addStaffItem.bind(this)}/> */}
+               <StaffFooter />
+                {/* <staffDetail 
                     staffDetail = {this.state.staffDetail}
                     closeDetail = {this.closeDetail.bind(this)}
                     editDetail = {this.editDetail.bind(this)}
-                />
+                /> */}
 
             </div>
         )
