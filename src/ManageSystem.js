@@ -80,7 +80,7 @@ class App extends React.Component {
                     items = {this.state.staff.allStaff}
                 />
 
->
+
                 {/* <StaffItemPanel
                     items = {this.state.staff.allStaff}
                     removeStaffItem = {this.removeStaffItem.bind(this)}
